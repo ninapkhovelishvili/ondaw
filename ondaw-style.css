@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-section {
+  width: 100%;
+  background-color: #3a3090;
+  position: fixed;
+  z-index: 2;
+}
+
+.header-section .items {
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-section .items .logo {
+  width: 165px;
+  height: 40px;
+  background-size: contain;
+  background-position: center center;
+}
+
+.header-section .items .nav-bar {
+  width: 650px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-section .items .nav-bar .menu {
+  width: 530px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-section .items .nav-bar .menu ul {
+  width: 660px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-section .items .nav-bar .menu li {
+  list-style: none;
+  display: inline;
+  color: white;
+}
+
+.header-section .items .nav-bar .menu a {
+  font-size: 14px;
+  font-family: arial;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-section .items .nav-bar .menu li:hover a {
+  color: #e54b84;
+}
+
+.header-section .items .search-cart {
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-section .items .search-cart .icon {
+  width: 45px;
+  height: 90px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-section .items .search-cart .icon:hover {
+  color: #e54b84;
+}
+
+.background-image {
+  width: 100%;
+  height: 730px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 90px;
+  z-index: 1;
+}
+
+.slider-section {
+  width: 100%;
+  padding-top: 120px;
+}
+
+.slider-section .items {
+  width: 100%;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-section .items .img {
+  width: 515px;
+  height: 470px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.slider-section .items .img .price {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: #e54b84;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+.slider-section .items .img .price p {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: white;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+
+.slider-section .items .img .sale {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 30px;
+  left: 180px;
+}
+
+.slider-section .items .text {
+  width: 515px;
+  height: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.slider-section .items .text h2 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+
+.slider-section .items .text .benefits {
+  width: 350px;
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: lightgrey;
+  font-size: 15px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.slider-section .items .text .benefits i {
+  padding-right: 7px;
+}
+
+.slider-section .items .text .button {
+  width: 235px;
+  height: 42px;
+  background-color: #e54b84;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider-section .items .text .button i {
+  padding-left: 10px;
+}
+
+.slider-section .items .text .button:hover {
+  background-color: white;
+  color: #272727;
+}
+
+.domain-section {
+  width: 100%;
+  height: 240px;
+  background-color: #f5f5f5;
+}
+
+.domain-section .items {
+  width: 100%;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.domain-section .items .left {
+  width: 500px;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.domain-section .items .left .item {
+  width: 80px;
+  height: 60px;
+  font-size: 25px;
+  border-right: 0.3px solid lightgray;
+  text-align: center;
+  font-family: sans-serif;
+  color: #272727;
+}
+
+.domain-section .items .left .item .price {
+  font-size: 20px;
+}
+
+.domain-section .items .right {
+  width: 680px;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.domain-section .items .right .item {
+  width: 500px;
+  height: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.domain-section .items .right .item input {
+  width: 391px;
+  height: 70px;
+  background-color: white;
+  outline-width: 0px;
+  border: 0.1px solid lightgray;
+  padding: 20px;
+}
+
+.domain-section .items .right .item select {
+  width: 102px;
+  height: 70px;
+  border: 1px solid lightgray;
+  outline-width: 0px;
+}
+
+.domain-section .items .right .item .button {
+  width: 168px;
+  height: 70px;
+  color: white;
+  background-color: #3a3090;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.offer-section {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.offer-section .items {
+  width: 100%;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+}
+
+.offer-section .items .text {
+  width: 100%;
+  height: 143px;
+  text-align: center;
+}
+
+.offer-section .items .text span {
+  border-bottom: 1px solid black;
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #272727;
+}
+
+.offer-section .items .text h5 {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 100;
+  color: #443b97;
+  font-size: 19px;
+  text-transform: uppercase;
+  padding-top: 15px;
+}
+
+.offer-section .items .offer-cards {
+  width: 100%;
+  height: 372px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.offer-section .items .offer-cards .card {
+  width: 255px;
+  height: 370px;
+  background-color: #3a3090;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 45px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.offer-section .items .offer-cards .card i {
+  font-size: 35px;
+  color: white;
+}
+
+.offer-section .items .offer-cards .card h4 {
+  font-size: 22px;
+  line-height: 25px;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-transform: capitalize;
+  color: white;
+  padding-top: 20px;
+}
+
+.offer-section .items .offer-cards .card p {
+  color: #b4b1d5;
+  font-size: 15px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.offer-section .items .offer-cards .card .circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  border: 1px solid #b4b1d5;
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.offer-section .items .offer-cards .card .circle span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.offer-section .items .offer-cards .card:hover {
+  background-color: white;
+  color: #3a3090;
+  border: 1px solid #3a3090;
+}
+
+.offer-section .items .offer-cards .card:hover h4 {
+  color: #3a3090;
+}
+
+.offer-section .items .offer-cards .card:hover i {
+  color: #3a3090;
+}
+
+.offer-section .items .offer-cards .card:hover p {
+  color: gray;
+}
+/*# sourceMappingURL=ondaw-style.css.map */
