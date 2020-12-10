@@ -24,7 +24,7 @@ $green: #6f9f03;
 }
 
 @mixin default-h4 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 25px;
     font-weight: 100;
     text-transform: capitalize;
@@ -45,7 +45,7 @@ $green: #6f9f03;
 }
 
 @mixin default-p {
-    color: #b4b1d5;
+    color: $light-gray;
     font-size: 15px;
     line-height: 1.5;
     font-weight: 500;
@@ -104,7 +104,7 @@ $green: #6f9f03;
     width: 100%;
     background-color: $purple;
     position: fixed;
-    z-index: 2;
+    z-index: 7;
 
     .items{
         width: 100%;
@@ -224,7 +224,7 @@ $green: #6f9f03;
 .wrapper{
     width: 100%;
 	padding-top: 90px;
-    z-index: 1;
+    z-index: 6;
     
     @media only screen and (max-width: 576px){
         padding-top: 40px;
@@ -459,6 +459,11 @@ $green: #6f9f03;
                     @media only screen and (max-width: 768px){
                         width: 300px;
                      }
+
+                     @media only screen and (max-width: 420px){
+                         height: 30px;
+                         width: 200px;
+                     }
                 }
 
                 select{
@@ -466,6 +471,10 @@ $green: #6f9f03;
                     height: 70px;
                     border: 1px solid lightgray;
                     outline-width: 0px;
+
+                    @media only screen and (max-width: 420px){
+                        height: 30px;
+                    }
                 }
 
                 .search-button{
@@ -477,8 +486,16 @@ $green: #6f9f03;
                     font-family: sans-serif;
                     text-transform: uppercase;
 
+
                     @media only screen and (max-width: 768px){
                         width: 140px;
+                     }
+
+                     @media only screen and (max-width: 420px){
+                         width: 100px;
+                         height: 50px;
+                         margin-top: 10px;
+                         font-size: 13px;
                      }
                 }
             }
@@ -540,10 +557,15 @@ $green: #6f9f03;
                 @media only screen and (max-width: 1200px){
                      margin: 20px;
                 }
+
                 @media only screen and (max-width: 768px){
                     width: 100%;
                     height: 300px;
-               }
+                }
+
+                @media only screen and (max-width: 320px){
+                    height: 371px;
+                }
 
 
                 i{
@@ -561,7 +583,7 @@ $green: #6f9f03;
                     padding-top: 20px;
                 }
 
-                .circle{
+                .circle-btn{
                     width: 46px;
                     height: 46px;
                     border-radius: 100%;
@@ -571,11 +593,8 @@ $green: #6f9f03;
                     align-items: center;
                     justify-content: center;
                     margin-top: 20px;
-
-                    span{
-                        font-size: 20px;
-                        font-weight: bold;
-                    }
+                    font-size: 20px;
+                    font-weight: bold;
                 }
 
                 &:hover{
@@ -600,7 +619,7 @@ $green: #6f9f03;
     }
 }
 
-.features-section{
+.our-services-section{
     width: 100%;
     margin-top: 40px;
 
@@ -696,7 +715,6 @@ $green: #6f9f03;
     width: 100%;
     @include background-cover();
     margin-top: 100px;
-    // opacity: 0.2;
     
 
     .items{
@@ -705,6 +723,7 @@ $green: #6f9f03;
         @include column();
         justify-content: center;
         align-items: center;
+        background-color: rgba(255,255,255,0.8);
         position: relative;
 
         @media  only screen and (max-width: 1200px){
@@ -745,92 +764,97 @@ $green: #6f9f03;
                     display: flex;
                     flex-wrap: wrap;
                 }
+
+                // @media  only screen and (max-width: 576px){
+                //     justify-content: center;
+                // }
                     
 
                 .card{
                     width: 263px;
                     height: 546px;
-                    background-color: white;
                     transition: 0.5s;
                     margin: 20px;
+                    @include column();
+                    background-color: $white;
+                    align-items: center;
 
 
-                    &:hover .inner-box{
+                    &:hover{
                         background-color: $pink;
                         color: $white;
                     }
 
-                    &:hover .order-box{
-                        background-color: $pink;
+                    &:hover li{
                         color: $white;
                     }
-                    
-                    
-                    .inner-box{
-                        width: 263px;
-                        height: 380px;
-                        padding: 40px;
+
+                    &:hover h4{
+                        color: $white;
+                        border-bottom: 0.3px solid $white;
+                    }
+
+                    &:hover .order-button-rect{
+                        background-color: $pink;
+                    }
+
+                    h3{
+                        font-size: 27px;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        padding-bottom: 30px;
+                        padding-top: 30px;
+                    }
+
+                    h4{
+                        font-size: 25px;
+                        font-weight: 700;
+                        color: $purple;
+                        padding-bottom: 20px;
+                        line-height: 1.3;
+                        border-bottom: 0.3px solid $purple;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+
+                        span{
+                            font-weight: 100;
+                            font-size: 15px;
+                        }
+                    }
+
+                    ul{
+                        width: 100%;
+                        height: 190px;
+                        margin-top: 10px;
                         @include column();
-                        background-color: $white;
+                        justify-content: center;
+                        align-items: center;
+
+                        li{
+                            @include default-p();
+                            color: gray;
+                            padding: 10px;
+                            border-bottom: 0.5px solid lightgray;
+                            list-style: none;
+                        } 
+                        
+                    }
+
+
+                    .order-button-rect{
+                        width: 263px;
+                        height: 186px;
+                        background-color: $purple;
+                        display: flex;
                         justify-content: center;
                         align-items: center;
                         transition: 0.5s;
 
 
-                        h3{
-                            font-size: 27px;
-                            font-weight: 400;
-                            text-transform: capitalize;
-                        }
-
-                        .price-rect{
-                            width: 100px;
-                            height: 93.5px;
-                            border-bottom: 1px solid $purple;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            
-
-                            h4{
-                                font-size: 18px;
-                                font-weight: 700;
-                                color: $purple;
-
-                                span{
-                                    font-weight: 100;
-                                }
-                            }
-                        }
-
-                        .feature-list{
-                            width: 183px;
-                            height: 129px;
-                            @include column();
-                            align-items: center;
-                            margin-top: 20px;
-
-                            p{
-                                @include default-p();
-                                color: gray;
-                                padding: 10px;
-                                border-bottom: 0.5px solid lightgray;
-                            }
-                        }
-                    }
-
-                    .order-box{
-                        width: 263px;
-                        height: 166px;
-                        background-color: $purple;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
                         .order-button{
                             width:162.5px;
                             height: 42px;
-                            background-color: $darkpurple;
                             border: 0.1px solid lightgray;
                             color: $white;
                             text-transform: uppercase;
@@ -838,7 +862,6 @@ $green: #6f9f03;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-
                         }
                     }
                 }
@@ -857,3 +880,188 @@ $green: #6f9f03;
     }
 }
 
+
+.who-we-are-section{
+    width: 100%;
+    margin-top: 80px;
+
+    .items{
+        width: 100%;
+        @include row();
+
+        @media  only screen and (max-width: 900px){
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-column{
+            width: 585px;
+            height: 999px;
+
+            .image{
+                width: 582px;
+                height: 510px;
+                margin-bottom: 3px;
+                margin-right: 3px;
+                @include background-cover();
+
+                @media  only screen and (max-width: 1200px){
+                    width: 100%;
+                }
+
+                @media  only screen and (max-width: 420px){
+                }
+            }
+
+            
+
+            .text{
+                width: 582px;
+                height: 486px;
+                background-color: $purple;
+                @include column();
+                justify-content: center;
+                align-items: center;
+                padding: 70px;
+                margin-right: 3px;
+
+                @media  only screen and (max-width: 1200px){
+                    width: 100%;
+                }
+
+                @media  only screen and (max-width: 420px){
+                    padding: 20px;
+                }
+
+                h4{
+                    @include default-h4();
+                    font-weight: 600;
+                    border-bottom: 1px solid $white;
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                }
+
+                h6{
+                    font-size: 16px;
+                    line-height: 21px;
+                    margin-bottom: 14px;
+                    color: $white;
+                    text-align: center;
+                    font-weight: 100;
+                }
+
+                p{
+                    font-size: 14px;
+                    line-height: 23px;
+                    color: #fff;
+                    opacity: 0.6;
+                    text-align: center;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+
+                .circle-btn{
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 100%;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                    font-size: 24px;
+                    line-height: 44px;
+                }
+
+                a{
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .right-column{
+            width: 585px;
+            height: 1079px;
+            margin-top: 80px;
+
+            .image{
+                width: 582px;
+                height: 510px;
+                @include background-cover();
+                margin-top: 3px;
+                margin-left: 3px;
+
+                @media  only screen and (max-width: 1200px){
+                    width: 100%;
+                }
+            }
+
+            .text{
+                width: 582px;
+                height: 486px;
+                background-color: $pink;
+                @include column();
+                justify-content: center;
+                align-items: center;
+                padding: 70px;
+                margin-left: 3px;
+
+                @media  only screen and (max-width: 1200px){
+                    width: 100%;
+                }
+
+                @media  only screen and (max-width: 420px){
+                    padding: 20px;
+                }
+
+                h4{
+                    @include default-h4();
+                    font-weight: 600;
+                    border-bottom: 1px solid $white;
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                }
+
+                h6{
+                    font-size: 16px;
+                    line-height: 21px;
+                    margin-bottom: 14px;
+                    color: $white;
+                    text-align: center;
+                    font-weight: 100;
+                }
+
+                p{
+                    font-size: 14px;
+                    line-height: 23px;
+                    color: #fff;
+                    opacity: 0.6;
+                    text-align: center;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+
+                .circle-btn{
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 100%;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                    font-size: 24px;
+                    line-height: 44px;
+                }
+
+                a{
+                    margin-top: 15px;
+                }
+ 
+            }
+        }
+    }
+}
